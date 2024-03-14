@@ -11,7 +11,7 @@
         <h2>FIND DUPLICATE ELEMENT</h2>
         <form style="margin-top: 40px;">
                 <label for="">Enter the value:</label>
-                <input type="text" id="num" ><br><br>
+                <input type="text" id="num" placeholder="split the number using ,"><br><br>
                 <button type="button" style="background-color: rgb(10, 167, 44);color: white;border-radius: 4px;" onclick="duplicate()">FIND</button>
         </form>
         <p id="duplicate" style="font-weight: bolder; color: red;"></p>
@@ -36,7 +36,6 @@
               document.getElementById("duplicate").innerHTML = duplicates.join(",");
 
             }
-            document.getElementById("duplicate").innerHTML = duplicates.join(",");
         </script>
 </body>
 </html>

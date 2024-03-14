@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="text-align: center; border: 2px solid black; border-radius: 8px; height: 280px; width: 400px;padding-top: 10px; float: inline-start;">
+        <h2>FIND DUPLICATE ELEMENT</h2>
+        <form style="margin-top: 40px;">
+                <label for="">Enter the value:</label>
+                <input type="text" id="num" ><br><br>
+                <button type="button" style="background-color: rgb(10, 167, 44);color: white;border-radius: 4px;" onclick="duplicate()">FIND</button>
+        </form>
+        <p id="duplicate" style="font-weight: bolder; color: red;"></p>
+        </div>
+
+        <script>
+            function duplicate(){
+              let num = document.getElementById("num").value ;
+              let array = num.split(",");
+              let duplicates = [];
+             
+              for (let i = 0; i < array.length; i++){
+                for(let j = i + 1; j < array.length; j++){
+                    if (array[i] === array[j]){
+                        if (!duplicates.includes(array[i])) {
+                duplicates.push(array[i]);
+                     }
+                    }
+
+                }
+              }
+              document.getElementById("duplicate").innerHTML = duplicates.join(",");
+
+            }
+            document.getElementById("duplicate").innerHTML = duplicates.join(",");
+        </script>
+</body>
+</html>
